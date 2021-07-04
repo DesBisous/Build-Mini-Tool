@@ -1,0 +1,19 @@
+{
+  "name": "Vite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/compiler-dom": "^3.0.0-rc.5",
+    "@vue/compiler-sfc": "^3.1.4",
+    "koa": "^2.13.1",
+    "vue": "^3.1.4"
+  }
+}

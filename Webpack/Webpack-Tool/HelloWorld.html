@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack hello world</title>
+</head>
+<body>
+  <script>
+    (function (list) {
+        function require(file) {
+          var exports = {};
+          (function (exports, code) {
+            eval(code);
+          })(exports, list[file]);
+          return exports;
+        }
+        require("index.js")
+      })({
+        "index.js": `
+          var add = require('add.js').default
+          console.log(add(1 , 2))
+        `,
+        "add.js": `
+          exports.default = function(a,b){return a + b}
+        `,
+      });
+  </script>
+</body>
+</html>
